@@ -29,17 +29,23 @@ p {
   overflow-wrap: break-word;
   text-wrap: pretty;
 }
-/*Declerations*/
+/*Declarations*/
 :root {
   font-size: 62.5%;
   --system-font: --system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --logo-font: Merienda;
   --page-font: Montserrat;
   --sidebar-bg: #209CEE;
+  --text-light: #818181;
 }
 
 .icon-sm {
   height: 1.8em;
+  aspect-ratio: 1;
+}
+
+.utility-icon {
+  height: 1.5em;
   aspect-ratio: 1;
 }
 
@@ -159,16 +165,123 @@ body {
   font-size: 1.5rem;
   vertical-align: bottom;
 }
+/*Searchbar*/
+.searchbar-container {
+  border: 2px solid red;
+  background-color: #FFFFFF;
+  display: grid;
+  grid-template-columns: 5fr;
+  
+}
 
+.searchbar {
+  grid-column: 1 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1em;
+  padding-left: 2rem;
+}
 
+.search {
+  height: 2.5rem;
+  fill: var(--text-light);
+}
 
+.search-field {
+  height: 4rem;
+  width: 80%;
+  font-size: 2.3rem;
+  color: var(--text-light);
+  border: none;
+}
 
+.search-field:focus {
+  outline: none;
+}
 
+.search-field::placeholder {
+  letter-spacing: -1.4px;
+}
+/*Add a book button*/
+.addbook-container {
+  grid-column: 3 / 4;
+  display: grid;
+  place-items: center;
+}
 
+.add-book {
+  background-color: #00C27B;
+  font-size: 2rem;
+  font-weight: 500;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  height: 50px;
+}
 
+.add-text,
+.add-icon {
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  height: 100%;
+}
 
+.add-icon {
+  background-color: RGBA(0, 0, 0, 0.15);
+}
 
+.button-icon {
+  fill: white;
+  height: 1.4em;
+  aspect-ratio: 1;
+}
 
+.add-book:hover {
+  background-color: #00CF83;
+}
+
+.add-book:active {
+  transform: translateY(1px);
+}
+/*Notifications*/
+.notification-container {
+  grid-column: 4 / 5;
+
+}
+.notification-container {
+  display: grid;
+  place-items: center;
+  padding: 0 4.5rem;
+}
+
+.notification {
+  height: 2.5rem;
+  fill: var(--text-light);
+}
+
+.not-wrapper {
+  position: relative;
+  cursor: pointer;
+}
+
+.notification-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgb(255, 99, 99);
+  border-radius: 1px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 1px 3px;
+}
+/*Footer*/
 footer {
   background: RGBA(0, 0, 0, 0.8);
   backdrop-filter: blur(1.5px);
