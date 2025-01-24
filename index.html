@@ -84,7 +84,7 @@
                     </svg>
                     <input type="text"
                            class="search-field"
-                           placeholder="Search books...">
+                           placeholder="Search a book...">
                 </div>
                 <div class="addbook-container">
                     <button class="add-book">
@@ -112,7 +112,86 @@
             </div>
             <!--Library-->
             <div class="library-ui">
+                <div class="library-header">
+                    <div class="book-header">
+                        <span class="book-number"></span>
+                        <p class="book-span">Books</p>
+                    </div>
+                    <div class="sort-options">
+                        <div class="sortby">
+                            <p>Date Added</p>
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                 viewBox="0 0 24 24"
+                                 class="utility-icon sort-icon">
+                                <title>Sort by date</title>
+                                <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
+                            </svg>
+                        </div>
+                        <div class="sortby">
+                            <p>Status</p>
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                 viewBox="0 0 24 24"
+                                 class="utility-icon sort-icon">
+                                <title>Sort by status</title>
+                                <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
+                            </svg>
+                        </div>
 
+                        <div class="view-options">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                 viewBox="0 0 24 24"
+                                 class="utility-icon view-icon">
+                                <title>Grid view</title>
+                                <path d="M3,11H11V3H3M3,21H11V13H3M13,21H21V13H13M13,3V11H21V3" />
+                            </svg>
+                            <hr class="options-divider">
+                            <svg xmlns="http://www.w3.org/2000/svg" 
+                                 viewBox="0 0 24 24"
+                                 class="utility-icon view-icon">
+                                <title>List view</title>
+                                <path d="M4,5V7H21V5M4,11H21V9H4M4,19H21V17H4M4,15H21V13H4V15Z" />
+                            </svg> 
+                        </div>
+                    </div>
+                </div>
+                <!--Library Cards-->
+                <div class="library-container">
+                    <div class="card">
+                        <div class="card-text">
+                            <span class="book-title">Our Mathematical Universe</span>
+                            <div class="author-wrapper">
+                                <p>by</p><span class="book-author">Max Tegmark</span> 
+                            </div> 
+                            <div class="pages-wrapper">
+                                <p>No. Pages: </p><span class="book-pages">432</span>
+                            </div>
+                        </div>
+                        <div class="status">
+                            <p>Status</p>
+                            <div class="card-status reading">
+                                <span>Reading...</span>
+                            </div>
+                        </div>
+                        <div class="book-icons">
+                            <svg xmlns="http://www.w3.org/2000/svg" 
+                                 viewBox="0 0 24 24"
+                                 class="utility-icon book-icon">
+                                 <title>Favorite</title>
+                                 <path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" 
+                                 viewBox="0 0 24 24"
+                                 class="utility-icon book-icon">
+                                 <title>Share</title>
+                                 <path d="M21,12L14,5V9C7,10 4,15 3,20C5.5,16.5 9,14.9 14,14.9V19L21,12Z" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" 
+                                 viewBox="0 0 24 24"
+                                 class="utility-icon book-icon"><title>Delete</title><path d="M9,3V4H4V6H5V19A2,2 0 0,0 7,21H17A2,2 0 0,0 19,19V6H20V4H15V3H9M7,6H17V19H7V6M9,8V17H11V8H9M13,8V17H15V8H13Z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <footer>
