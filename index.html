@@ -8,6 +8,84 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
+        <dialog>
+            <div class="dialog-header" open>
+                <div class="newbook-hero">
+                    <svg xmlns="http://www.w3.org/2000/svg" 
+                         viewBox="0 0 24 24"
+                         class="icon-sm newbook-icon">
+                         <title>New Book</title>
+                         <path d="M13.09 20H5V6H3V20A2 2 0 0 0 5 22H13.81A5.5 5.5 0 0 1 13.09 20M19 2H9A2 2 0 0 0 7 4V16A2 2 0 0 0 9 18H13.09A5.5 5.5 0 0 1 13.81 16H9V4H11V10L13.5 7.75L16 10V4H19V13A6 6 0 0 1 21 13.34V4A2 2 0 0 0 19 2M20 15V18H23V20H20V23H18V20H15V18H18V15Z" />
+                    </svg>
+                    <p>Add a book</p>
+                </div>
+                <div class="newbook-close">
+                    <svg xmlns="http://www.w3.org/2000/svg" 
+                         viewBox="0 0 24 24"
+                         class="icon-sm close-modal">
+                         <title>Close</title>
+                         <path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" />
+                    </svg>
+                </div>
+            </div>
+            <form id="user-form">
+                <div class="input">
+                    <label for="title-input">Book Title</label>
+                    <input type="text"
+                           id="title-input"
+                           class="modal"
+                           minlength="0"
+                           maxlength="20"
+                           required>
+                </div>
+                <div class="input">
+                    <label for="author-input">Book Author</label>
+                    <input type="text"
+                           id="author-input"
+                           class="modal"
+                           minlength="0"
+                           maxlength="20"
+                           required>
+                </div>
+                <div class="input">
+                    <label for="pages-input">No. Pages</label>
+                    <input type="number"
+                           id="pages-input"
+                           class="modal"
+                           min="0"
+                           max="9999"
+                           required>
+                </div>
+                <div class="input">
+                    <p>Have you read it?</p>
+                    <div class="readstatus-container">
+                        <div>
+                            <input type="radio"
+                                   id="yes"
+                                   name="status"
+                                   value="Complete">
+                            <label for="yes"
+                                   class="radio-label">Yes</label>
+                        </div>
+                        <div>
+                            <input type="radio"
+                                   id="no"
+                                   name="status"
+                                   value="Reading...">
+                            <label for="no"
+                                   class="radio-label">No</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="dialog-options">
+                    <button type="button" 
+                            class="cancel-btn">Cancel</button>
+                    <button type="submit"
+                            class="confirm-btn">Confirm</button>
+                </div>
+            </form>
+            
+        </dialog>
         <div class="container">
             <div class="settings-ui">
                 <div class="user-actions">
@@ -156,7 +234,7 @@
                 </div>
                 <!--Library Cards-->
                 <div class="library-container">
-                    <div class="card">
+                    <!--<div class="card">
                         <div class="card-text">
                             <span class="book-title">Our Mathematical Universe</span>
                             <div class="author-wrapper">
@@ -190,7 +268,7 @@
                                  class="utility-icon book-icon"><title>Delete</title><path d="M9,3V4H4V6H5V19A2,2 0 0,0 7,21H17A2,2 0 0,0 19,19V6H20V4H15V3H9M7,6H17V19H7V6M9,8V17H11V8H9M13,8V17H15V8H13Z" />
                             </svg>
                         </div>
-                    </div>
+                    </div>-->
                 </div>
             </div>
         </div>
@@ -203,6 +281,6 @@
                  class="git-logo"
                  target="_blank"></a>
         </footer>
-        <script src="script.js" defer></script>
+        <script src="script.js"></script>
     </body>
 </html>
